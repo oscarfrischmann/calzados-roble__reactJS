@@ -1,5 +1,6 @@
 import React from 'react';
 import CartWidget from './CartWidget';
+import mainLogo from '../assets/img/logo-roble-g.png'
 
 
 const NavBar = ({}) => {
@@ -7,7 +8,7 @@ const NavBar = ({}) => {
 	
 	return (
 		<nav className='nav'>
-			<img src='./src/assets/img/logo-roble-g.png' className='nav__logo' alt='' />
+			<img src={mainLogo} className='nav__logo' alt='' />
 			<ul className='nav__ul'>
 				<li className='nav__ul-item'>
 					<a href=''>mujer</a>
