@@ -1,11 +1,13 @@
 import React from 'react';
 import CartWidget from './CartWidget';
 
-const NavBar = () => {
+
+const NavBar = ({}) => {
 	const suma = 65695;
+	
 	return (
 		<nav className='nav'>
-			<img src='../assets/img/logo-roble-g.png' className='nav__logo' alt='' />
+			<img src='./src/assets/img/logo-roble-g.png' className='nav__logo' alt='' />
 			<ul className='nav__ul'>
 				<li className='nav__ul-item'>
 					<a href=''>mujer</a>
