@@ -9,6 +9,11 @@
   text-decoration: none;
 }
 
+body {
+
+  background-color: #c2c8ff;
+}
+
 
 @mixin flex($direction, $justify, $align, $gap) {
   display: flex;
@@ -21,11 +26,12 @@
 //*NAVBAR
 .nav {
   @include flex(row, space-around, center, 0);
-  background-color: lightblue;
+  background-color: rgb(251, 213, 255);
 
   &__logo {
     width: 200px;
     margin-bottom: 15px;
+    filter: drop-shadow(0px 0px 3px #dc143c);
   }
 
   &__ul {
@@ -43,5 +49,30 @@
 
   span {
     font-size: 2rem;
+  }
+}
+
+//* GREETING
+
+.greeting {
+  &__container {
+    width: fit-content;
+    // height: auto;
+    box-shadow: 2px 2px 5px;
+    margin: 50px auto;
+    border-radius: 15px;
+    background-color: #ffffff60;
+    overflow: hidden;
+
+    img {
+      width: 500px;
+      filter: sepia(50%);
+    }
+
+    h2 {
+      text-align: center;
+      padding: 25px;
+    }
+
   }
 }

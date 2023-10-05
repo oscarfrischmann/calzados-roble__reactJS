@@ -1,10 +1,10 @@
 import React from 'react';
 
-const CartWidget = () => {
+const CartWidget = ({ suma }) => {
 	return (
 		<div className='cart-widget'>
-			<i class="bi bi-cart4"></i>
-            <span>0</span>
+			<i class='bi bi-cart4'></i>
+			<span>{suma + suma}</span>
 		</div>
 	);
 };

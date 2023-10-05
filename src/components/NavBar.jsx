@@ -2,6 +2,7 @@ import React from 'react';
 import CartWidget from './CartWidget';
 
 const NavBar = () => {
+	const suma = 65695;
 	return (
 		<nav className='nav'>
 			<img src='./src/assets/img/logo-roble-g.png' className='nav__logo' alt='' />
@@ -25,7 +26,7 @@ const NavBar = () => {
 					<a href=''>contacto</a>
 				</li>
 			</ul>
-			<CartWidget/>
+			<CartWidget suma={suma} />
 		</nav>
 	);
 };
