@@ -1,14 +1,16 @@
 import React from 'react';
-import CartWidget from './CartWidget';
-import mainLogo from '../assets/img/logo-roble-g.png'
-
+import CartWidget from '../cartWidget/CartWidget';
+import mainLogo from '../../assets/img/logo-roble-g.png';
+import { Link } from 'react-router-dom';
 
 const NavBar = ({}) => {
 	const suma = 65695;
-	
+
 	return (
 		<nav className='nav'>
-			<img src={mainLogo} className='nav__logo' alt='' />
+			<Link to={"/"}>
+				<img src={mainLogo} className='nav__logo' alt='' />
+			</Link>
 			<ul className='nav__ul'>
 				<li className='nav__ul-item'>
 					<a href=''>mujer</a>
