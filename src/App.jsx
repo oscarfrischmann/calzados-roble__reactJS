@@ -1,5 +1,5 @@
 import '../src/scss/styles.scss';
-import Item from './components/item/item';
+import Item from './components/item/Item';
 import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer';
 import ItemList from './components/itemList/ItemList';
 import ItemListContainer from './components/itemlistcontainer/ItemListContainer';

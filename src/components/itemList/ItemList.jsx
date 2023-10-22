@@ -1,5 +1,5 @@
 import React from 'react';
-import Item from '../item/item';
+import Item from '../item/Item';
 
 const ItemList = ({products}) => {
 	console.log(products)
