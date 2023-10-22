@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import ItemCount from '../itemCount/ItemCount';
 
 const Item = ({ id, category, description, image, price, title }) => {
-	const [itemQuantity, setItemQuantity] = useState(0);
 	return (
 		<article className='item'>
 			<div className='item__img-container'>
@@ -10,12 +10,8 @@ const Item = ({ id, category, description, image, price, title }) => {
 			</div>
 			<h2 className='item__title'>{title}</h2>
 			<div className='item__buttons'>
-				<button onClick={() => setItemQuantity(itemQuantity++)}>
-					Agregar al Carrito
-				</button>
-				<Link to={'/'}>
-					<button>Volver </button>
-				</Link>
+				<ItemCount />
+				
 			</div>
 		</article>
 	);

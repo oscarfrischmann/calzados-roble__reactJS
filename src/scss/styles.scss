@@ -91,8 +91,7 @@ body {
 }
 
 
-//*GREETING
-
+//*ITEM
 .item {
   display: flex;
   flex-direction: column;
@@ -103,6 +102,7 @@ body {
   margin: 20px;
   box-shadow: 1px 1px 3px;
   overflow: hidden;
+  position: relative;
 
   &__title {
     font-size: 1rem;
@@ -120,6 +120,29 @@ body {
     padding: 8px;
     margin: 0 auto;
   }
+}
 
-  &__buttons {}
+
+//* Item Counter
+.counter {
+
+  &__quantity {
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    font-weight: 900;
+    padding: 3px;
+    border: solid green 1px;
+  }
+
+  &__button {
+    cursor: pointer;
+    width: fit-content;
+    padding: 5px;
+    margin: 3px;
+    background-color: rgba(38, 0, 255, 0.308);
+    border-radius: 3px;
+    border: 1px solid rgb(77, 77, 167);
+  }
+
 }

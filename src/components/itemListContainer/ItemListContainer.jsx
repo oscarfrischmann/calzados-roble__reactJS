@@ -20,8 +20,7 @@ const ItemListContainer = ({ greeting }) => {
 		getProducts()
 			.then((products) => setProducts(products))
 			.catch((e) => console.log('erorrrr', e));
-	}, []);
-
+	}, []); 
 
 	return (
 		<div className='greeting__container'>
