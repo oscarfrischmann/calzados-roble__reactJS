@@ -7,7 +7,6 @@ import NavBar from './components/navBar/NavBar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
-	const greeting = 'E-commerce de Calzados Roble';
 
 	return (
 		<BrowserRouter>
@@ -17,7 +16,7 @@ function App() {
 				<Route exact path="/itemlist" element={<ItemList/>} />
 				<Route exact path='/itemlistcontainer' element={<ItemListContainer/>}/>
 			</Routes>
-			<ItemListContainer greeting={greeting} />
+			<ItemListContainer />
 		</BrowserRouter>
 	);
 }

@@ -75,7 +75,6 @@ body {
     background-color: #ffffff;
     overflow: hidden;
 
-
     .greeting {
       text-align: center;
       padding: 25px;
@@ -88,21 +87,34 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-bottom: 50px;
 }
-
 
 //*ITEM
 .item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  width: 200px;
-  height: 300px;
-  margin: 20px;
-  box-shadow: 1px 1px 3px;
-  overflow: hidden;
-  position: relative;
+
+  &__ver-mas {
+    width: fit-content;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 5px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+    height: 300px;
+    margin: 20px;
+    box-shadow: 1px 1px 3px;
+    overflow: hidden;
+    position: relative;
+  }
 
   &__title {
     font-size: 1rem;
@@ -122,10 +134,8 @@ body {
   }
 }
 
-
 //* Item Counter
 .counter {
-
   &__quantity {
     position: absolute;
     top: 3px;
@@ -136,13 +146,38 @@ body {
   }
 
   &__button {
+
     cursor: pointer;
     width: fit-content;
     padding: 5px;
-    margin: 3px;
-    background-color: rgba(38, 0, 255, 0.308);
-    border-radius: 3px;
-    border: 1px solid rgb(77, 77, 167);
-  }
+    margin: 3px 0 0;
+    color: #ffffff;
+    font-weight: 600;
+    border: solid black;
 
+    &:nth-child(1) {
+      border-radius: 3px 0 0 3px;
+      background-color: red;
+      border-width: 1px 0 1px 1px;
+      padding: 5px 10px 5px;
+
+
+    }
+
+    &:nth-child(2) {
+      border-radius: 0px;
+      background-color: #4267B2;
+      border-width: 1px 0;
+    }
+
+    &:nth-child(3) {
+      border-radius: 0px 3px 3px 0;
+      background-color: green;
+      border-width: 1px 1px 1px 0px;
+
+      padding: 5px 10px 5px;
+
+
+    }
+  }
 }

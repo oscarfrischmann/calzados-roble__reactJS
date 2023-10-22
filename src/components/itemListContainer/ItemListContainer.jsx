@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import ItemList from '../itemList/ItemList';
 
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
 	let [products, setProducts] = useState([]);
 
 	const getProducts = async () => {
 		try {
 			const fetchProducts = await fetch(
-				'https://fakestoreapi.com/products?limit=10'
+				'https://fakestoreapi.com/products'
 			);
 			products = await fetchProducts.json();
 			return products;
@@ -24,7 +24,7 @@ const ItemListContainer = ({ greeting }) => {
 
 	return (
 		<div className='greeting__container'>
-			<h2 className='greeting'>{greeting}</h2>
+			<h2 className='greeting'>Calzados Roble</h2>
 			<ItemList products={products} />
 		</div>
 	);
