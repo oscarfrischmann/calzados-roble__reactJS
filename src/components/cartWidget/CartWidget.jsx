@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const CartWidget = ({ suma }) => {
+const CartWidget = () => {
 	const [quantity, setQuantity] = useState(0);
 
 	return (

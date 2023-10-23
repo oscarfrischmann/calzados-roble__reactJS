@@ -10,11 +10,13 @@ const Item = ({ id, category, description, image, price, title }) => {
 					<img className='item__img' src={image} alt='' />
 				</div>
 				<h2 className='item__title'>{title}</h2>
-				<div className='item__buttons'>
+				{/* <div className='item__buttons'>
 					<ItemCount />
-				</div>
+				</div> */}
 			</div>
-			<button className="item__ver-mas">ver detalle</button>
+			<Link to={`/product/${id}`}>
+				<button className='item__ver-mas'>ver detalle</button>
+			</Link>
 		</article>
 	);
 };

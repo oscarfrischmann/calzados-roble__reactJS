@@ -1,9 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import ItemDetail from '../itemDetail/ItemDetail.jsx';
+import './itemDetailContainer.scss';
 
 const ItemDetailContainer = () => {
-  return (
-    <div>ItemDetailContainer</div>
-  )
-}
+	let [products, setProducts] = useState([]);
 
-export default ItemDetailContainer
+	const getProducts = async () => {
+		try {
+			const fechedProducts = await fetch('https://fakestoreapi.com/products');
+			products = await fechedProducts.json();
+			console.log(products);
+			return products;
+		} catch (e) {
+			console.log('Error: ', e);
+		}
+	};
+
+	useEffect(() => {
+		getProducts()
+			.then((products) => setProducts(products))
+			.catch((e) => console.log(e));
+	}, []);
+
+	return <ItemDetail products={products} />;
+};
+
+export default ItemDetailContainer;

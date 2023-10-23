@@ -69,10 +69,10 @@ body {
   &__container {
     width: 80vw;
     // height: auto;
-    box-shadow: 2px 2px 5px;
+    // box-shadow: 2px 2px 5px
     margin: 50px auto;
     border-radius: 15px;
-    background-color: #ffffff;
+    // background-color: #ffffff;
     overflow: hidden;
 
     .greeting {
@@ -114,6 +114,7 @@ body {
     box-shadow: 1px 1px 3px;
     overflow: hidden;
     position: relative;
+    background-color: #ffffff;
   }
 
   &__title {
@@ -146,7 +147,6 @@ body {
   }
 
   &__button {
-
     cursor: pointer;
     width: fit-content;
     padding: 5px;
@@ -160,13 +160,11 @@ body {
       background-color: red;
       border-width: 1px 0 1px 1px;
       padding: 5px 10px 5px;
-
-
     }
 
     &:nth-child(2) {
       border-radius: 0px;
-      background-color: #4267B2;
+      background-color: #4267b2;
       border-width: 1px 0;
     }
 
@@ -176,8 +174,6 @@ body {
       border-width: 1px 1px 1px 0px;
 
       padding: 5px 10px 5px;
-
-
     }
   }
 }
