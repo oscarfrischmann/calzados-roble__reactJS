@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
 	let [products, setProducts] = useState([]);
+	
 	const { category } = useParams();
 	console.log( 'clg de Category useParams ItemListContainer: ',category)
 
@@ -29,9 +30,10 @@ const ItemListContainer = () => {
 
 	return (
 		<div className='greeting__container'>
-			<h2 className='greeting'>Calzados Roble</h2>
+			<h2 className='greeting'>Fake Store</h2>
 			
-			<ItemList products={products} productsByCategory={productsByCategory}/>
+			{/* <ItemList productsByCategory={productsByCategory}/> */}
+			<ItemList products={products} productsByCategory={productsByCategory} category={category}/>
 		</div>
 	);
 };

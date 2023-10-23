@@ -16,7 +16,7 @@ const ItemDetail = ({ products }) => {
 			{filteredProduct.map((p) => {
 				return (
 					<div key={p.id}>
-						<div className='item__card'>
+						<div className='item__card detail'>
 							<div className='item__img-container'>
 								<img className='item__img' src={p.image} alt='' />
 							</div>
