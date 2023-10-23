@@ -2,7 +2,7 @@ import '../src/scss/styles.scss';
 import Cart from './components/cart/Cart';
 import ItemDetail from './components/itemDetail/ItemDetail';
 import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer';
-import ItemListContainer from './components/itemlistcontainer/ItemListContainer.jsx';
+import ItemListContainer from './components/itemListContainer/ItemListContainer.jsx';
 import NavBar from './components/navBar/NavBar.jsx';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
