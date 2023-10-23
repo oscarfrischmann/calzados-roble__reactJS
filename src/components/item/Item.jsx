@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import ItemCount from '../itemCount/ItemCount';
 
 const Item = ({ id, category, description, image, price, title }) => {
 	return (

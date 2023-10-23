@@ -1,21 +1,31 @@
 import React from 'react';
 import CartWidget from '../cartWidget/CartWidget';
 import mainLogo from '../../assets/img/logo-roble-g.png';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
-const NavBar = ({}) => {
+const NavBar = () => {
+
 	return (
 		<nav className='nav'>
 			<Link to={'/'}>
 				<img src={mainLogo} className='nav__logo' alt='' />
 			</Link>
 			<ul className='nav__ul'>
-				<li className='nav__ul-item'>mujer</li>
-				<li className='nav__ul-item'>hombre</li>
-				<li className='nav__ul-item'>niño</li>
-				<li className='nav__ul-item'>accesorios</li>
-				<li className='nav__ul-item'>nosotros</li>
-				<li className='nav__ul-item'>contacto</li>
+				<Link to={`/category/men's clothing`}>
+					<li className='nav__ul-item'>men's clothing</li>
+				</Link>
+
+				<Link to={`/category/jewelery`}>
+					<li className='nav__ul-item'>jewelery</li>
+				</Link>
+
+				<Link to={`/category/electronics`}>
+					<li className='nav__ul-item'>electronics</li>
+				</Link>
+
+				<Link to={`/category/women's clothing`}>
+					<li className='nav__ul-item'>women's clothing</li>
+				</Link>
 			</ul>
 			<Link to='/cart'>
 				<CartWidget />
