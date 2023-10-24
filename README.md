@@ -1,8 +1,27 @@
-# React + Vite
+#E-commerce Calzados Roble
+[![logo](https://calzados-roble-react-js.vercel.app/assets/logo-roble-g-1e694822.png 'logo')](https://calzados-roble-react-js.vercel.app/ 'logo')
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- React JS
+- HTML 5
+- CSS 3;
+- Javascript
+- Responsive @ media queries
+- SASS
+- API usage
 
-Currently, two official plugins are available:
+## Learning web development since april 2023
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+####Web development - coderhouse 2023
+####JavaScript - coderhouse 2023
+
+#### React JS - coderhouse - in progress
+
+---
+
+###Site flow
+![gif](./src/assets/2023-10-24-11-11-11.gif 'gif')
+
+---
+
+:fa-linkedin:
+[Oscar Frischmann](http://https://www.linkedin.com/in/oscar-frischmann-3a8806272/ 'linkedin')
