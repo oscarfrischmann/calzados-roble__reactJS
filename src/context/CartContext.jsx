@@ -16,6 +16,17 @@ export const CartProvider = ({ children }) => {
 			const idsInCart = cart.map((product) => product.id);
 			if (idsInCart.includes(filteredProduct.id)) {
 				alert('Ok');
+				const matchingProduct = cart.find(
+					(inCart) => inCart.id === filteredProduct.id
+				);
+				const newQuantity = (matchingProduct.quantity += filteredProduct.quantity);
+
+				filteredProduct.quantity = newQuantity;
+				filteredProduct.totalPrice = newQuantity * filteredProduct.price;
+				const matchingProductIndex = cart.indexOf(matchingProduct);
+				cart.splice(matchingProductIndex, 1);
+
+				setCart((prevCart) => [...prevCart, filteredProduct]);
 			} else {
 				setCart((prevCart) => [...prevCart, filteredProduct]);
 			}
