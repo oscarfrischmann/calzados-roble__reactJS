@@ -2,11 +2,8 @@ import React, { useContext, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './itemDetail.scss';
 import ItemCount from '../itemCount/ItemCount.jsx';
-import { CartContext } from '../../context/CartContext.jsx';
 
 const ItemDetail = ({ products }) => {
-	const cartContext = useContext(CartContext);
-
 	const { id } = useParams();
 	// console.log(id);
 	// console.log(products);

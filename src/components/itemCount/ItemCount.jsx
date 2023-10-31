@@ -2,9 +2,16 @@ import React, { useContext, useState } from 'react';
 import { CartContext } from '../../context/CartContext.jsx';
 
 const ItemCount = ({ filteredProduct }) => {
-	console.log(filteredProduct);
 	const { addProduct, cart, setCart } = useContext(CartContext);
 	const [counter, setCounter] = useState(0);
+	const productToCart = {
+		id: filteredProduct[0].id,
+		name: filteredProduct[0].title,
+		price: filteredProduct[0].price,
+		image: filteredProduct[0].image,
+		quantity: counter,
+		totalPrice: filteredProduct[0].price * counter,
+	};
 
 	const add = () => {
 		setCounter(counter + 1);
@@ -16,8 +23,7 @@ const ItemCount = ({ filteredProduct }) => {
 	};
 
 	const onAdd = () => {
-		addProduct(filteredProduct);
-		console.log('onAdd pushed');
+		addProduct(productToCart, counter);
 	};
 
 	return (

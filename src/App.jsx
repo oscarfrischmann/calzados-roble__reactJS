@@ -4,7 +4,6 @@ import ItemDetailContainer from './components/itemDetailContainer/ItemDetailCont
 import ItemListContainer from './components/itemListContainer/ItemListContainer.jsx';
 import NavBar from './components/navBar/NavBar.jsx';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import ComponenteA from './components/CompanenteA';
 import CartProvider from './context/CartContext.jsx';
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
 					<Route exact path='/product/:id' element={<ItemDetailContainer />} />
 					<Route exact path='/category/:category' element={<ItemListContainer />} />
 				</Routes>
-				<ComponenteA />
 			</CartProvider>
 		</BrowserRouter>
 	);

@@ -5,15 +5,24 @@ export const CartContext = createContext([]);
 
 export const CartProvider = ({ children }) => {
 	//* Espacio para crear estados, cariables, funciones, etc
-	console.log(children);
 
-	let [cart, setCart] = useState([]);
-	//!POr qué hay un useState si  cart se setea con push?
-	//! setCart(cart.push(productToCart)); o falta un useEffect?
+	const [cart, setCart] = useState([]);
+	console.log('const cart', cart);
 
-	const addProduct = (prod) => {
-		cart.push(prod);
-		console.log(cart);
+	const addProduct = (filteredProduct, counter) => {
+		if (!counter) {
+			alert('Agregue cantidad de productos');
+		} else if (cart.length > 0) {
+			const idsInCart = cart.map((product) => product.id);
+			if (idsInCart.includes(filteredProduct.id)) {
+				alert('Ok');
+			} else {
+				setCart((prevCart) => [...prevCart, filteredProduct]);
+			}
+		} else {
+			setCart((prevCart) => [...prevCart, filteredProduct]);
+			console.log(cart);
+		}
 	};
 
 	return (
