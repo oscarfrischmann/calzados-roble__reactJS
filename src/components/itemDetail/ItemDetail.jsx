@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './itemDetail.scss';
-import ItemCount from '../itemCount/ItemCount';
+import ItemCount from '../itemCount/ItemCount.jsx';
+import { CartContext } from '../../context/CartContext.jsx';
 
 const ItemDetail = ({ products }) => {
+	const cartContext = useContext(CartContext);
+
 	const { id } = useParams();
-	console.log(id);
-	console.log(products);
+	// console.log(id);
+	// console.log(products);
 
 	const filteredProduct = products.filter((product) => product.id == id);
 	console.log('filtered: ', filteredProduct);
@@ -22,7 +25,7 @@ const ItemDetail = ({ products }) => {
 							</div>
 							<h2 className='item__title'>{p.title}</h2>
 							<div className='item__buttons'>
-								<ItemCount />
+								<ItemCount filteredProduct={filteredProduct} />
 							</div>
 						</div>
 					</div>

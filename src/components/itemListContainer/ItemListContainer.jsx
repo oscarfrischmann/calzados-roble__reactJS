@@ -4,14 +4,13 @@ import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
 	let [products, setProducts] = useState([]);
-	
+
 	const { category } = useParams();
-	console.log( 'clg de Category useParams ItemListContainer: ',category)
+	console.log('clg de Category useParams ItemListContainer: ', category);
 
-	console.log('producst: ',products)
+	console.log('producst: ', products);
 	const productsByCategory = products.filter((p) => p.category === category);
-	console.log('productsByCategory',productsByCategory)
-
+	console.log('productsByCategory', productsByCategory);
 
 	const getProducts = async () => {
 		try {
@@ -31,9 +30,11 @@ const ItemListContainer = () => {
 	return (
 		<div className='greeting__container'>
 			<h2 className='greeting'>Fake Store</h2>
-			
-			{/* <ItemList productsByCategory={productsByCategory}/> */}
-			<ItemList products={products} productsByCategory={productsByCategory} category={category}/>
+			<ItemList
+				products={products}
+				productsByCategory={productsByCategory}
+				category={category}
+			/>
 		</div>
 	);
 };

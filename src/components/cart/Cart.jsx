@@ -1,10 +1,17 @@
-import React from 'react'
-import './cart.scss'
+import React, { useContext } from 'react';
+import './cart.scss';
+import Form from '../form/Form.jsx';
+import { CartContext } from '../../context/CartContext';
 
 const Cart = () => {
-  return (
-    <div className='cart'>Cart</div>
-  )
-}
+	const cartContext = useContext(CartContext);
+	console.log(cartContext.cart);
+	return (
+		<>
+			<div className='cart'>CART</div>
+			<Form />
+		</>
+	);
+};
 
-export default Cart
+export default Cart;

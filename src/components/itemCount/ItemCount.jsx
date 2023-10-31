@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { CartContext } from '../../context/CartContext.jsx';
 
-const ItemCount = () => {
-
+const ItemCount = ({ filteredProduct }) => {
+	console.log(filteredProduct);
+	const { addProduct, cart, setCart } = useContext(CartContext);
 	const [counter, setCounter] = useState(0);
 
 	const add = () => {
@@ -14,7 +16,8 @@ const ItemCount = () => {
 	};
 
 	const onAdd = () => {
-		alert(`${counter} producto/s agregado/s exitosamente al carrito!!`);
+		addProduct(filteredProduct);
+		console.log('onAdd pushed');
 	};
 
 	return (
