@@ -5,16 +5,18 @@ import { CartContext } from '../../context/CartContext';
 import CartItem from '../cartItem/CartItem.jsx';
 
 const Cart = () => {
-	const { cart } = useContext(CartContext);
+	const { cart, cleanCart } = useContext(CartContext);
 	console.log(cart);
 	return (
 		<>
-			<div className='cart'>CART</div>
+			<h2 className='cart'>Carrito de compras</h2>
 			<div className='cart-container'>
 				{cart.map((product) => (
 					<CartItem key={product.id} {...product} />
 				))}
+				<button onClick={() => cleanCart()}>Limpiar carrito</button>
 			</div>
+			<hr />
 			<Form />
 		</>
 	);

@@ -15,7 +15,6 @@ export const CartProvider = ({ children }) => {
 		} else if (cart.length > 0) {
 			const idsInCart = cart.map((product) => product.id);
 			if (idsInCart.includes(filteredProduct.id)) {
-				alert('Ok');
 				const matchingProduct = cart.find(
 					(inCart) => inCart.id === filteredProduct.id
 				);
@@ -27,17 +26,31 @@ export const CartProvider = ({ children }) => {
 				cart.splice(matchingProductIndex, 1);
 
 				setCart((prevCart) => [...prevCart, filteredProduct]);
+				alert('Producto actualizado');
 			} else {
 				setCart((prevCart) => [...prevCart, filteredProduct]);
+				alert('Producto agregado al carrito');
 			}
 		} else {
 			setCart((prevCart) => [...prevCart, filteredProduct]);
+			alert('Producto agregado al carrito');
+
 			console.log(cart);
 		}
 	};
 
+	const removeProduct = (inCartID) => {
+		const cartUpdated = cart.filter((product) => product.id !== inCartID);
+		setCart(cartUpdated);
+	};
+
+	const cleanCart = () => {
+		setCart([]);
+	};
+
 	return (
-		<CartContext.Provider value={{ cart, setCart, addProduct }}>
+		<CartContext.Provider
+			value={{ cart, setCart, addProduct, removeProduct, cleanCart }}>
 			{children}
 		</CartContext.Provider>
 	);
