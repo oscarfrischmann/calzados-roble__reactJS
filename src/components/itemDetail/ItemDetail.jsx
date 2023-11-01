@@ -5,8 +5,8 @@ import ItemCount from '../itemCount/ItemCount.jsx';
 
 const ItemDetail = ({ products }) => {
 	const { id } = useParams();
-	// console.log(id);
-	// console.log(products);
+	console.log(id);
+	console.log(products);
 
 	const filteredProduct = products.filter((product) => product.id == id);
 	console.log('filtered: ', filteredProduct);
@@ -21,6 +21,7 @@ const ItemDetail = ({ products }) => {
 								<img className='item__img' src={p.image} alt='' />
 							</div>
 							<h2 className='item__title'>{p.title}</h2>
+							<p>{p.description}</p>
 							<div className='item__buttons'>
 								<ItemCount filteredProduct={filteredProduct} />
 							</div>
