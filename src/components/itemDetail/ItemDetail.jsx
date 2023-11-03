@@ -16,13 +16,15 @@ const ItemDetail = ({ products }) => {
 			{filteredProduct.map((p) => {
 				return (
 					<div key={p.id}>
-						<div className='item__card detail'>
-							<div className='item__img-container'>
-								<img className='item__img' src={p.image} alt='' />
+						<div className='item-detail'>
+							<img className='item-detail__img' src={p.image} alt='' />
+							<div className='item-detail__info'>
+								<h2 className='item-detail__title'>{p.title}</h2>
+								<span className='item-detail__price'>$ {p.price}.-</span>
+								<p className='item-detail__description'>{p.description}</p>
+								<hr />
 							</div>
-							<h2 className='item__title'>{p.title}</h2>
-							<p>{p.description}</p>
-							<div className='item__buttons'>
+							<div className='item-detail__buttons-container'>
 								<ItemCount filteredProduct={filteredProduct} />
 							</div>
 						</div>

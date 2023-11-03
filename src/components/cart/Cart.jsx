@@ -21,7 +21,7 @@ const Cart = () => {
 				</div>
 			)}
 			<hr />
-			<Form />
+			{!cart.length ? null : <Form />}
 		</>
 	);
 };

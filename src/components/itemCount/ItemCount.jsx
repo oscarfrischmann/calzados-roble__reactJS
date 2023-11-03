@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { CartContext } from '../../context/CartContext.jsx';
+import './itemCount.scss';
 
 const ItemCount = ({ filteredProduct }) => {
 	const { addProduct, cart, setCart } = useContext(CartContext);
@@ -34,7 +35,7 @@ const ItemCount = ({ filteredProduct }) => {
 					-
 				</button>
 				<button className='counter__button' onClick={onAdd}>
-					agregar al carrito
+					comprar
 				</button>
 				<button className='counter__button' onClick={add}>
 					+
