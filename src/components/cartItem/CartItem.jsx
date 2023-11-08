@@ -10,6 +10,7 @@ const CartItem = ({ ...product }) => {
 			<h1>{product.name}</h1>
 			<h2>${product.totalPrice}</h2>
 			<h3>cantidad: {product.quantity}</h3>
+			<h3>Talle: {product.size}</h3>
 			<button onClick={() => removeProduct(product.id)}>Quitar producto</button>
 		</div>
 	);

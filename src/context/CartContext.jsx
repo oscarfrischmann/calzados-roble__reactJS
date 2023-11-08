@@ -7,8 +7,9 @@ export const CartProvider = ({ children }) => {
 	//* Espacio para crear estados, cariables, funciones, etc
 
 	const [cart, setCart] = useState([]);
+	const [size, setSize] = useState(0);
 	console.log('const cart', cart);
-
+	console.log(size);
 	const addProduct = (filteredProduct, counter) => {
 		if (!counter) {
 			alert('Agregue cantidad de productos');
@@ -50,7 +51,7 @@ export const CartProvider = ({ children }) => {
 
 	return (
 		<CartContext.Provider
-			value={{ cart, setCart, addProduct, removeProduct, cleanCart }}>
+			value={{ cart, setCart, addProduct, removeProduct, cleanCart, size, setSize }}>
 			{children}
 		</CartContext.Provider>
 	);

@@ -5,6 +5,7 @@ import ItemListContainer from './components/itemListContainer/ItemListContainer.
 import NavBar from './components/navBar/NavBar.jsx';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CartProvider from './context/CartContext.jsx';
+import Form from './components/form/Form.jsx';
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 					<Route exact path='/cart' element={<Cart />} />
 					<Route exact path='/product/:id' element={<ItemDetailContainer />} />
 					<Route exact path='/category/:category' element={<ItemListContainer />} />
+					<Route exact path='/form' element={<Form />} />
 				</Routes>
 			</CartProvider>
 		</BrowserRouter>
