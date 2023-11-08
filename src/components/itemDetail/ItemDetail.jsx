@@ -21,19 +21,19 @@ const ItemDetail = ({ products }) => {
 	return (
 		<>
 			{filteredProduct.map((p) => {
-				if (p.sizes) {
-					console.log(p.sizes[39]);
-					console.log(p.sizes[40]);
-					console.log(p.sizes[41]);
-					console.log(p.sizes[42]);
-					console.log(p.sizes[43]);
-					console.log(p.sizes[44]);
-					console.log(p.sizes[45]);
-					p.sizes[39] ? console.log('Hay') : console.log('no hay');
-					p.sizes[41] ? console.log('Hay') : console.log('no hay');
-				} else {
-					console.log('No hay sizes');
-				}
+				// if (p.sizes) {
+				// 	console.log(p.sizes[39]);
+				// 	console.log(p.sizes[40]);
+				// 	console.log(p.sizes[41]);
+				// 	console.log(p.sizes[42]);
+				// 	console.log(p.sizes[43]);
+				// 	console.log(p.sizes[44]);
+				// 	console.log(p.sizes[45]);
+				// 	p.sizes[39] ? console.log('Hay') : console.log('no hay');
+				// 	p.sizes[41] ? console.log('Hay') : console.log('no hay');
+				// } else {
+				// 	console.log('No hay sizes');
+				// }
 				return (
 					<div key={p.id}>
 						<div className='item-detail'>

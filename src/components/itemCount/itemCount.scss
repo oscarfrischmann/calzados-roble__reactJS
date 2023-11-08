@@ -1,10 +1,15 @@
 .counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
 
     &__quantity {
 
         font-weight: 900;
-        padding: 3px;
-        border: solid green 1px;
+        padding: 8px;
+        border-radius: 8px;
+        box-shadow: inset -2px -2px 12px #00000059;
     }
 
     &__button {
@@ -17,11 +22,12 @@
         border: none;
 
         &:nth-child(1) {
-            border-radius: 3px 3px;
+            border-radius: 8px 8px;
             background-color: red;
+            padding: 10px;
         }
 
-        &:nth-child(2) {
+        &.add {
             border-radius: 8px;
             background-color: #8042b2;
             padding: 10px;
@@ -29,8 +35,9 @@
         }
 
         &:nth-child(3) {
-            border-radius: 3px 3px;
+            border-radius: 8px 8px;
             background-color: green;
+            padding: 10px;
 
         }
     }

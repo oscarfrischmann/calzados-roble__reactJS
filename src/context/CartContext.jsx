@@ -1,5 +1,5 @@
-import { createContext, useState } from 'react';
 import React from 'react';
+import { createContext, useState } from 'react';
 
 export const CartContext = createContext([]);
 
@@ -10,6 +10,7 @@ export const CartProvider = ({ children }) => {
 	const [size, setSize] = useState(0);
 	console.log('const cart', cart);
 	console.log(size);
+
 	const addProduct = (filteredProduct, counter) => {
 		if (!counter) {
 			alert('Agregue cantidad de productos');
