@@ -6,5 +6,13 @@
         border-radius: 3px;
         border: none;
         background-color: aquamarine;
+
+        &.disabled {
+            background-color: red;
+            padding: 3px;
+            margin: 3px;
+            border-radius: 3px;
+            border: none;
+        }
     }
 }
