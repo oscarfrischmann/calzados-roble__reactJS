@@ -3,6 +3,7 @@ import './cart.scss';
 import Form from '../form/Form.jsx';
 import { CartContext } from '../../context/CartContext';
 import CartItem from '../cartItem/CartItem.jsx';
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
 	const { cart, cleanCart } = useContext(CartContext);
@@ -21,7 +22,9 @@ const Cart = () => {
 				</div>
 			)}
 			<hr />
-			{!cart.length ? null : <Form />}
+			<Link to={'/Form'}>
+				<button>Finalizar compra</button>
+			</Link>
 		</>
 	);
 };

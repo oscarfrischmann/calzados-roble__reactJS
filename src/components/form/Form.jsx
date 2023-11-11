@@ -11,15 +11,17 @@ const Form = () => {
 
 	const db = getFirestore();
 
-	const submitForm = (e) => {
+	const submitForm = async (e) => {
 		e.preventDefault();
-		addDoc(ordersCollection, order)
-			.then(({ id }) => setOrderId(id))
-			.finally(setCart([]));
-
-		console.log(nombre);
-		console.log(email);
+		try {
+			await addDoc(ordersCollection, order)
+				.then(({ id }) => setOrderId(id))
+				.then(setCart([]));
+		} catch {
+			(e) => console.log(e);
+		}
 	};
+
 	const order = {
 		nombre: nombre,
 		email: email,
@@ -28,7 +30,7 @@ const Form = () => {
 
 	const ordersCollection = collection(db, 'MiOrden');
 
-	const onInput = (e) => {};
+	// const onInput = (e) => {};
 
 	return (
 		<div>
@@ -44,7 +46,8 @@ const Form = () => {
 
 				<button type='submit'>Submit</button>
 			</form>
-			<p>Nro de order: {orderId}</p>
+
+			{orderId && <p>Nro de order: {orderId}</p>}
 		</div>
 	);
 };

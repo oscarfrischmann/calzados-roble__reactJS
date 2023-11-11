@@ -11,9 +11,10 @@ export const CartProvider = ({ children }) => {
 	console.log(size);
 
 	const idsInCartSize = cart.map((product) => product.size);
+
 	const addProduct = (filteredProduct, counter) => {
-		if (!counter || !size) {
-			alert('Agregue cantidad de productos o talle');
+		if (!size && filteredProduct.category !== 'billeteras') {
+			alert('Agregue talle');
 		} else if (cart.length > 0) {
 			const idsInCartID = cart.map((product) => product.id);
 			console.log(idsInCartSize[0] === size);
@@ -30,9 +31,12 @@ export const CartProvider = ({ children }) => {
 				cart.splice(matchingProductIndex, 1);
 
 				setCart((prevCart) => [...prevCart, filteredProduct]);
+				setSize(0);
 				alert('Producto actualizado');
 			} else {
 				setCart((prevCart) => [...prevCart, filteredProduct]);
+				setSize(0);
+
 				alert('Producto agregado al carrito');
 			}
 		} else {

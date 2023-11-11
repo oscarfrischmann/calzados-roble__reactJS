@@ -5,7 +5,7 @@ import Sizes from '../sizes/Sizes.jsx';
 
 const ItemCount = ({ filteredProduct }) => {
 	const { addProduct, cart, setCart, size } = useContext(CartContext);
-	const [counter, setCounter] = useState(0);
+	const [counter, setCounter] = useState(1);
 	const [sizesARR, setSizesArr] = useState([]);
 	const productToCart = {
 		id: filteredProduct[0].id,
@@ -20,10 +20,12 @@ const ItemCount = ({ filteredProduct }) => {
 
 	const add = () => {
 		setCounter(counter + 1);
+		console.log(counter);
 	};
 	const substract = () => {
 		if (counter > 0) {
 			setCounter(counter - 1);
+			console.log(counter);
 		}
 	};
 	function animation() {
