@@ -1,0 +1,43 @@
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__ver-mas {
+        width: fit-content;
+        text-transform: uppercase;
+        white-space: nowrap;
+        padding: 5px;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 200px;
+        height: 300px;
+        margin: 20px;
+        box-shadow: 1px 1px 3px;
+        overflow: hidden;
+        position: relative;
+        background-color: #ffffff;
+    }
+
+    &__title {
+        font-size: 0.8rem;
+        padding: 0 5px;
+    }
+
+    &__img-container {
+        width: 100%;
+    }
+
+    &__img {
+        width: 100%;
+        // width: 60%;
+        // align-self: center;
+        padding: 8px;
+        margin: 0 auto;
+    }
+}

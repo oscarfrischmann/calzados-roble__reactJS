@@ -12,7 +12,7 @@ const CartItem = ({ ...product }) => {
 				{<img src={product.image} className='cart__img'></img>}
 				<h2>{product.name}</h2>
 				<h3>${product.totalPrice}</h3>
-				<h4>cantidad: {product.quantity}</h4>
+				<h4>Cantidad: {product.quantity}</h4>
 				{product.category !== 'billeteras' ? (
 					<h3>Talle: {product.size}</h3>
 				) : (

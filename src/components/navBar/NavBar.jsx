@@ -3,6 +3,7 @@ import CartWidget from '../cartWidget/CartWidget';
 import mainLogo from '../../assets/img/logo-roble-g.png';
 import { Link, useParams } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
+import './navBar.scss';
 
 const NavBar = () => {
 	const { cart } = useContext(CartContext);

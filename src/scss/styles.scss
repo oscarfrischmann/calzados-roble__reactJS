@@ -38,37 +38,7 @@ body {
 }
 
 //*NAVBAR
-.nav {
-  @include flex(row, space-around, center, 0);
-  position: fixed;
-  top: 0px;
-  z-index: 1;
-  background-color: #ffffff;
-  width: 100vw;
 
-  &__logo {
-    width: 200px;
-    margin-bottom: 15px;
-    filter: drop-shadow(0px 0px 3px #dc143c);
-  }
-
-  &__ul {
-    @include flex(row, center, center, 30px);
-    list-style-type: none;
-    font-size: 2rem;
-    font-family: 'Comfortaa', sans-serif;
-    text-transform: capitalize;
-  }
-
-  i {
-    font-size: 2em;
-    margin: 10px;
-  }
-
-  span {
-    font-size: 2rem;
-  }
-}
 
 //* GREETING
 
@@ -98,48 +68,5 @@ body {
 }
 
 //*ITEM
-.item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  &__ver-mas {
-    width: fit-content;
-    text-transform: uppercase;
-    white-space: nowrap;
-    padding: 5px;
-  }
-
-  &__card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 200px;
-    height: 300px;
-    margin: 20px;
-    box-shadow: 1px 1px 3px;
-    overflow: hidden;
-    position: relative;
-    background-color: #ffffff;
-  }
-
-  &__title {
-    font-size: 0.8rem;
-    padding: 0 5px;
-  }
-
-  &__img-container {
-    width: 100%;
-  }
-
-  &__img {
-    width: 100%;
-    // width: 60%;
-    // align-self: center;
-    padding: 8px;
-    margin: 0 auto;
-  }
-}
 
 //* Item Counter

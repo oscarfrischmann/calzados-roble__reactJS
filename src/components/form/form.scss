@@ -1,0 +1,52 @@
+.form {
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px #0000006b;
+    background-color: white;
+    margin: 50px auto;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+
+    &__name,
+    &__email {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    &__btn {
+        padding: 8px 30px;
+        width: fit-content;
+        font-size: 1.2rem;
+        margin: 0 auto;
+        border: none;
+        background-color: #0077246b;
+        border-radius: 25px;
+        box-shadow: 2px 2px 5px #0000006b;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #009c2f6b;
+        }
+
+        &:active {
+            transform: scale(0.99);
+            box-shadow: none;
+        }
+    }
+
+    input {
+        background-color: rgba(0, 255, 255, 0.027);
+        border: none;
+        border-bottom: 1px solid;
+        height: 25px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

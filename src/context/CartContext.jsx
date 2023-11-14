@@ -17,7 +17,6 @@ export const CartProvider = ({ children }) => {
 				alert('Producto agregado ');
 				setSize(0);
 			} else {
-				alert('cart !0');
 				const idsInCartID = cart.map((product) => product.id);
 				console.log('isdincartID', idsInCartID);
 				if (idsInCartID.includes(filteredProduct.id)) {

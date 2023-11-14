@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { addDoc, getFirestore, collection } from 'firebase/firestore';
 import { CartContext } from '../../context/CartContext.jsx';
+import './form.scss';
 
 const Form = () => {
 	const [nombre, setNombre] = useState('');
@@ -30,24 +31,32 @@ const Form = () => {
 
 	const ordersCollection = collection(db, 'MiOrden');
 
-	// const onInput = (e) => {};
-
 	return (
 		<div>
-			<form onSubmit={submitForm}>
-				<input
-					type='text'
-					name='myName'
-					onChange={(e) => setNombre(e.target.value)}></input>
-				<input
-					type='email'
-					name='myEmail'
-					onChange={(e) => setEmail(e.target.value)}></input>
+			<form onSubmit={submitForm} className='form'>
+				<div className='form__name'>
+					<label htmlFor='name'>Nombre</label>
+					<input
+						type='text'
+						name='name'
+						onChange={(e) => setNombre(e.target.value)}
+						required></input>
+				</div>
+				<div className='form__email'>
+					<label htmlFor='email'>E-mail</label>
+					<input
+						type='email'
+						name='email'
+						onChange={(e) => setEmail(e.target.value)}
+						required></input>
+				</div>
 
-				<button type='submit'>Submit</button>
+				<button type='submit' className='form__btn'>
+					Comprar
+				</button>
 			</form>
 
-			{orderId && <p>Nro de order: {orderId}</p>}
+			{orderId && <p>Nro de pedido: {orderId}</p>}
 		</div>
 	);
 };

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './item.scss';
 
 const Item = ({ id, category, description, image, price, title }) => {
 	return (

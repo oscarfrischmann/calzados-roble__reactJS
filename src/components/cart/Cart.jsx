@@ -18,13 +18,23 @@ const Cart = () => {
 					{cart.map((product) => (
 						<CartItem key={product.id + product.size} {...product} />
 					))}
-					<button onClick={() => cleanCart()}>Limpiar carrito</button>
+					<button
+						onClick={() => cleanCart()}
+						className='cart__remove-item-btn cart__clean'>
+						Limpiar carrito
+					</button>
 				</div>
 			)}
-			<hr />
+
 			{cart.length ? (
-				<Link to={'/Form'}>
-					<button>Finalizar compra</button>
+				<Link to={'/Form'} className='link'>
+					<button className='button type--A'>
+						<div className='button__line'></div>
+						<div className='button__line'></div>
+						<span className='button__text'>Finalizar compra</span>
+						<div className='button__drow1'></div>
+						<div className='button__drow2'></div>
+					</button>
 				</Link>
 			) : null}
 		</>
