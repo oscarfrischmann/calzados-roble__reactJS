@@ -4,8 +4,8 @@ import '../cartItem/cartItem.scss';
 
 const CartItem = ({ ...product }) => {
 	const { setCart, cart, removeProduct, size } = useContext(CartContext);
-	console.log(cart);
-	console.log(product.category);
+	// console.log(cart);
+	// console.log(product.category);
 	return (
 		<div>
 			<h1>{product.name}</h1>

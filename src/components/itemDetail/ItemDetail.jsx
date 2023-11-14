@@ -6,17 +6,17 @@ import ItemCount from '../itemCount/ItemCount.jsx';
 const ItemDetail = ({ products }) => {
 	const { id } = useParams();
 	const [sizes, setSizes] = [];
-	console.log(id);
-	console.log(products);
+	// console.log('VER DETALLE product id x useParams:', id);
+	// console.log('products x props', products);
 
 	const filteredProduct = products.filter((product) => product.id == id);
-	console.log('filtered: ', filteredProduct);
+	// console.log('filtered: ', filteredProduct);
 	if (filteredProduct[0]) {
 		for (let size in filteredProduct[0].sizes) {
-			console.log(size);
+			// console.log(size);
 		}
 	} else {
-		console.log('no hay "filteredProduct[0].sizes"');
+		// console.log('no hay "filteredProduct[0].sizes"');
 	}
 	return (
 		<>

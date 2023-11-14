@@ -2,7 +2,7 @@ import React from 'react';
 import Item from '../item/Item';
 
 const ItemList = ({ products, productsByCategory, category }) => {
-	console.log(products);
+	// console.log(products);
 	return (
 		<div className='list-product-container'>
 			{category

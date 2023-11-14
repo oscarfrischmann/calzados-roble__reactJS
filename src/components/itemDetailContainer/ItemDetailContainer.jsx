@@ -26,7 +26,7 @@ const ItemDetailContainer = () => {
 		getDocs(itemCollection).then((querySnapshot) => {
 			const docs = querySnapshot.docs.map((doc) => doc.data());
 			querySnapshot.docs.forEach((first) => {
-				console.log(first.id);
+				// console.log(first.id);
 			});
 			setProducts(docs);
 		});

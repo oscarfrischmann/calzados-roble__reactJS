@@ -7,11 +7,11 @@ const ItemListContainer = () => {
 	let [products, setProducts] = useState([]);
 
 	const { category } = useParams();
-	console.log('clg de Category useParams ItemListContainer: ', category);
+	// console.log('clg de Category useParams ItemListContainer: ', category);
 
-	console.log('producst: ', products);
+	// console.log('producst: ', products);
 	const productsByCategory = products.filter((p) => p.category === category);
-	console.log('productsByCategory', productsByCategory);
+	// console.log('productsByCategory', productsByCategory);
 
 	useEffect(() => {
 		const db = getFirestore();

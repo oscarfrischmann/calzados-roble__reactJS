@@ -22,9 +22,11 @@ const Cart = () => {
 				</div>
 			)}
 			<hr />
-			<Link to={'/Form'}>
-				<button>Finalizar compra</button>
-			</Link>
+			{cart.length ? (
+				<Link to={'/Form'}>
+					<button>Finalizar compra</button>
+				</Link>
+			) : null}
 		</>
 	);
 };
