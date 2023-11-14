@@ -14,7 +14,7 @@ export const CartProvider = ({ children }) => {
 		if (filteredProduct.category === 'billeteras') {
 			if (cart.length === 0) {
 				setCart((prevCart) => [...prevCart, filteredProduct]);
-				alert('Producto agregado al carrito primera vez');
+				alert('Producto agregado ');
 				setSize(0);
 			} else {
 				alert('cart !0');
@@ -39,7 +39,7 @@ export const CartProvider = ({ children }) => {
 					alert('Producto actualizado');
 				} else {
 					setCart((prevCart) => [...prevCart, filteredProduct]);
-					alert('Producto agregado al carrito primera vez');
+					alert('Producto agregado');
 					setSize(0);
 				}
 			}
@@ -60,7 +60,7 @@ export const CartProvider = ({ children }) => {
 					console.log('matchingproductSSS', matchingProducts);
 					if (matchingProducts.length === 0) {
 						setCart((prevCart) => [...prevCart, filteredProduct]);
-						console.log(`else NOT INCLUDES FILTER.ID`);
+						alert(`Producto agregado`);
 						setSize(0);
 					} else {
 						console.log('size MATCHED');
@@ -78,7 +78,7 @@ export const CartProvider = ({ children }) => {
 
 						setCart((prevCart) => [...prevCart, filteredProduct]);
 						setSize(0);
-						console.log('Producto actualizado');
+						alert('Producto actualizado');
 					}
 					// for (let i = 0; i < matchingProducts.length; i++) {
 					// 	console.log('vuelta', i);
@@ -106,7 +106,7 @@ export const CartProvider = ({ children }) => {
 					// }
 				} else {
 					setCart((prevCart) => [...prevCart, filteredProduct]);
-					console.log(`else NOT INCLUDES FILTER.ID`);
+					alert(`Producto agregado`);
 					setSize(0);
 				}
 			}
