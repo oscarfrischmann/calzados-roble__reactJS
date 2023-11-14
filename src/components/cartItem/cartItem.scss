@@ -1,0 +1,16 @@
+.cart {
+    &__item {
+        background-color: white;
+        display: grid;
+        grid-template-columns: repeat(6, 6fr);
+        grid-template-rows: 1fr;
+        align-items: center;
+        justify-content: start;
+        gap: 20px;
+        padding: 10px 50px;
+    }
+
+    &__img {
+        width: 50%;
+    }
+}

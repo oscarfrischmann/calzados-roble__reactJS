@@ -7,15 +7,23 @@ const CartItem = ({ ...product }) => {
 	// console.log(cart);
 	// console.log(product.category);
 	return (
-		<div>
-			<h1>{product.name}</h1>
-			<h2>${product.totalPrice}</h2>
-			<h3>cantidad: {product.quantity}</h3>
-			{product.category !== 'billeteras' ? <h3>Talle: {product.size}</h3> : null}
-			<button onClick={() => removeProduct(product.id, product.size)}>
-				Quitar producto
-			</button>
-		</div>
+		<>
+			<div className='cart__item'>
+				{<img src={product.image} className='cart__img'></img>}
+				<h2>{product.name}</h2>
+				<h3>${product.totalPrice}</h3>
+				<h4>cantidad: {product.quantity}</h4>
+				{product.category !== 'billeteras' ? (
+					<h3>Talle: {product.size}</h3>
+				) : (
+					<h3>S/T</h3>
+				)}
+				<button onClick={() => removeProduct(product.id, product.size)}>
+					Quitar producto
+				</button>
+			</div>
+			<hr />
+		</>
 	);
 };
 
