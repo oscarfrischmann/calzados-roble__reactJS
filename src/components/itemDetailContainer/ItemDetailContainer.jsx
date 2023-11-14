@@ -3,8 +3,10 @@ import ItemDetail from '../itemDetail/ItemDetail.jsx';
 import './itemDetailContainer.scss';
 import { collection, getDocs, getFirestore, doc, getDoc } from 'firebase/firestore';
 import { useParams } from 'react-router-dom';
+import Loader from '../loader/Loader.jsx';
 const ItemDetailContainer = () => {
 	let [products, setProducts] = useState([]);
+	const [isLoading, setIsLoading] = useState(true);
 	// const { id } = useParams();
 	// console.log('clg id', id);
 	// useEffect(() => {
@@ -25,13 +27,14 @@ const ItemDetailContainer = () => {
 		const itemCollection = collection(db, 'roble');
 		getDocs(itemCollection).then((querySnapshot) => {
 			const docs = querySnapshot.docs.map((doc) => doc.data());
-			querySnapshot.docs.forEach((first) => {
-				// console.log(first.id);
-			});
+			// querySnapshot.docs.forEach((first) => {
+			// 	console.log(first.id);
+			// });
 			setProducts(docs);
+			setIsLoading(false);
 		});
 	}, []);
-	return <ItemDetail products={products} />;
+	return isLoading ? <Loader /> : <ItemDetail products={products} />;
 };
 
 export default ItemDetailContainer;

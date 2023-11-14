@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { addDoc, getFirestore, collection } from 'firebase/firestore';
-import { CartContext } from '../../context/CartContext';
+import { CartContext } from '../../context/CartContext.jsx';
 
 const Form = () => {
 	const [nombre, setNombre] = useState('');

@@ -18,8 +18,10 @@ const CartItem = ({ ...product }) => {
 				) : (
 					<h3>S/T</h3>
 				)}
-				<button onClick={() => removeProduct(product.id, product.size)}>
-					Quitar producto
+				<button
+					onClick={() => removeProduct(product.id, product.size)}
+					className='cart__remove-item-btn'>
+					X
 				</button>
 			</div>
 			<hr />
