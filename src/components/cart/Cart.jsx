@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import './cart.scss';
-import Form from '../form/Form.jsx';
 import { CartContext } from '../../context/CartContext';
 import CartItem from '../cartItem/CartItem.jsx';
 import { Link } from 'react-router-dom';
@@ -27,14 +26,8 @@ const Cart = () => {
 			)}
 
 			{cart.length ? (
-				<Link to={'/Form'} className='link'>
-					<button className='button type--A'>
-						<div className='button__line'></div>
-						<div className='button__line'></div>
-						<span className='button__text'>Finalizar compra</span>
-						<div className='button__drow1'></div>
-						<div className='button__drow2'></div>
-					</button>
+				<Link to={'/form'} className='link'>
+					<button className='form__btn'>Finalizar compra</button>
 				</Link>
 			) : null}
 		</>

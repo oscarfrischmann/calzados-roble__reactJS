@@ -79,30 +79,6 @@ export const CartProvider = ({ children }) => {
 						setSize(0);
 						alert('Producto actualizado');
 					}
-					// for (let i = 0; i < matchingProducts.length; i++) {
-					// 	console.log('vuelta', i);
-					// 	if (matchingProducts[i].size === filteredProduct.size) {
-					// 		console.log('size MATCHED');
-					// 		const newQuantity = (matchingProducts[i].quantity +=
-					// 			filteredProduct.quantity);
-
-					// 		filteredProduct.quantity = newQuantity;
-					// 		filteredProduct.totalPrice = newQuantity * filteredProduct.price;
-					// 		const matchingProductIndex = cart.indexOf(matchingProducts[i]);
-					// 		console.log('matchingprod INDEX', matchingProductIndex);
-					// 		cart.splice(matchingProductIndex, 1);
-					// 		console.log('cart after splice', cart);
-
-					// 		setCart((prevCart) => [...prevCart, filteredProduct]);
-					// 		setSize(0);
-					// 		console.log('Producto actualizado');
-					// 	} else if (matchingProducts[i].size !== filteredProduct.size) {
-					// 		console.log('newSIZE');
-					// 		setCart((prevCart) => [...prevCart, filteredProduct]);
-					// 		console.log(`${filteredProduct.name} number ${size} added READED`);
-					// 		setSize(0);
-					// 	}
-					// }
 				} else {
 					setCart((prevCart) => [...prevCart, filteredProduct]);
 					alert(`Producto agregado`);
@@ -111,80 +87,6 @@ export const CartProvider = ({ children }) => {
 			}
 		}
 	};
-
-	// 	} else if (cart.length > 0) {
-	// 		const idsInCartID = cart.map((product) => product.id);
-	// 		console.log(idsInCartSize[0] === size);
-	// 		console.log(idsInCartSize);
-	// 		console.log(idsInCartID);
-
-	// 		if (idsInCartID.includes(filteredProduct.id) && idsInCartSize[0] === size) {
-	// 			const matchingProduct = cart.find(
-	// 				(inCart) => inCart.id === filteredProduct.id
-	// 			);
-	// 			const newQuantity = (matchingProduct.quantity += filteredProduct.quantity);
-
-	// 			filteredProduct.quantity = newQuantity;
-	// 			filteredProduct.totalPrice = newQuantity * filteredProduct.price;
-	// 			const matchingProductIndex = cart.indexOf(matchingProduct);
-	// 			cart.splice(matchingProductIndex, 1);
-
-	// 			setCart((prevCart) => [...prevCart, filteredProduct]);
-	// 			setSize(0);
-	// 			alert('Producto actualizado');
-	// 		} else {
-	// 			setCart((prevCart) => [...prevCart, filteredProduct]);
-	// 			setSize(0);
-
-	// 			alert('Producto agregado al carrito');
-	// 		}
-	// 	} else {
-	// 		setCart((prevCart) => [...prevCart, filteredProduct]);
-	// 		alert('Producto agregado al carrito primera vez');
-	// 		setSize(0);
-
-	// 		console.log(cart);
-	// 	}
-	// };
-
-	//!--------------------------------------
-	// const addProduct = (filteredProduct, counter) => {
-	// 	if (!size && filteredProduct.category !== 'billeteras') {
-	// 		alert('Agregue talle');
-	// 	} else if (cart.length > 0) {
-	// 		const idsInCartID = cart.map((product) => product.id);
-	// 		console.log(idsInCartSize[0] === size);
-	// 		console.log(idsInCartSize);
-	// 		console.log(idsInCartID);
-
-	// 		if (idsInCartID.includes(filteredProduct.id) && idsInCartSize[0] === size) {
-	// 			const matchingProduct = cart.find(
-	// 				(inCart) => inCart.id === filteredProduct.id
-	// 			);
-	// 			const newQuantity = (matchingProduct.quantity += filteredProduct.quantity);
-
-	// 			filteredProduct.quantity = newQuantity;
-	// 			filteredProduct.totalPrice = newQuantity * filteredProduct.price;
-	// 			const matchingProductIndex = cart.indexOf(matchingProduct);
-	// 			cart.splice(matchingProductIndex, 1);
-
-	// 			setCart((prevCart) => [...prevCart, filteredProduct]);
-	// 			setSize(0);
-	// 			alert('Producto actualizado');
-	// 		} else {
-	// 			setCart((prevCart) => [...prevCart, filteredProduct]);
-	// 			setSize(0);
-
-	// 			alert('Producto agregado al carrito');
-	// 		}
-	// 	} else {
-	// 		setCart((prevCart) => [...prevCart, filteredProduct]);
-	// 		alert('Producto agregado al carrito primera vez');
-	// 		setSize(0);
-
-	// 		console.log(cart);
-	// 	}
-	// };
 	const removeProduct = (inCartID, size) => {
 		console.log(inCartID, size);
 		const cartUpdated = cart.filter(

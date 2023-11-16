@@ -4,7 +4,7 @@
     background-color: white;
     margin: 50px auto;
     width: 400px;
-    height: 200px;
+    height: 270px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -22,7 +22,7 @@
         padding: 8px 30px;
         width: fit-content;
         font-size: 1.2rem;
-        margin: 0 auto;
+        margin: 20px auto;
         border: none;
         background-color: #0077246b;
         border-radius: 25px;
@@ -47,6 +47,37 @@
 
         &:focus {
             outline: none;
+        }
+    }
+}
+
+.gracias {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px #0000006b;
+    width: 400px;
+    padding: 15px;
+    margin: 0 auto;
+
+    span {
+        font-size: 1.5rem;
+        text-align: center;
+
+        em {
+            font-weight: 700;
+        }
+    }
+
+    .form__btn {
+        background-color: #c21919b9;
+
+        &:hover {
+            background-color: #c74747b9;
         }
     }
 }

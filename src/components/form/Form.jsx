@@ -1,6 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { addDoc, getFirestore, collection } from 'firebase/firestore';
 import { CartContext } from '../../context/CartContext.jsx';
+import { Link } from 'react-router-dom';
+
 import './form.scss';
 
 const Form = () => {
@@ -33,30 +35,43 @@ const Form = () => {
 
 	return (
 		<div>
-			<form onSubmit={submitForm} className='form'>
-				<div className='form__name'>
-					<label htmlFor='name'>Nombre</label>
-					<input
-						type='text'
-						name='name'
-						onChange={(e) => setNombre(e.target.value)}
-						required></input>
-				</div>
-				<div className='form__email'>
-					<label htmlFor='email'>E-mail</label>
-					<input
-						type='email'
-						name='email'
-						onChange={(e) => setEmail(e.target.value)}
-						required></input>
-				</div>
+			{!orderId && (
+				<form onSubmit={submitForm} className='form'>
+					<div className='form__name'>
+						<label htmlFor='name'>Nombre</label>
+						<input
+							type='text'
+							name='name'
+							onChange={(e) => setNombre(e.target.value)}
+							required></input>
+					</div>
+					<div className='form__email'>
+						<label htmlFor='email'>E-mail</label>
+						<input
+							type='email'
+							name='email'
+							onChange={(e) => setEmail(e.target.value)}
+							required></input>
+					</div>
 
-				<button type='submit' className='form__btn'>
-					Comprar
-				</button>
-			</form>
+					<button type='submit' className='form__btn'>
+						Comprar
+					</button>
+				</form>
+			)}
 
-			{orderId && <p>Nro de pedido: {orderId}</p>}
+			{orderId && (
+				<div className='gracias'>
+					<span>Gracias por tu compra, {nombre}!</span>
+					<span>
+						{' '}
+						Nro de pedido: <em>{orderId}</em>
+					</span>
+					<Link to={'/'}>
+						<button className='form__btn'>Cerrar</button>
+					</Link>
+				</div>
+			)}
 		</div>
 	);
 };
